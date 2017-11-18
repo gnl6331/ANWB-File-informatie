@@ -5,7 +5,6 @@ getFileAnwbData.onreadystatechange = () => {
         let statusHTML = "";
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 
-
             /* The if and else statement is checking if there is actualy a traffic jam.
             This to prevent it is adding data without a traffic jam.
             */
