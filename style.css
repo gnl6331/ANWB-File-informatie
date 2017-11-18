@@ -1,0 +1,80 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+body {
+    background-color: #203438;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+.file-informatie {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+  justify-content: space-between;
+  flex-flow: column;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.file-panel {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.file-panel-heading {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.file-panel-heading h2 {
+  margin: 0;
+  color: red;
+}
+
+.file-panel-content-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: none;
+}
+
+.file-panel-content {
+  box-sizing: border-box;
+  padding: 0px 15px 10px 15px;
+  width: 100%;
+  color: #666;
+}
+
+.file-panel-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+}
+
+.file-panel-content p, .file-panel-heading p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
