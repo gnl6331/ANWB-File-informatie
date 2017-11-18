@@ -45,8 +45,14 @@ body {
 
 .file-panel-heading {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px 15px;
   cursor: pointer;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .file-panel-heading h2 {
@@ -77,4 +83,7 @@ body {
   padding: 5px 0;
   font-size: 0.85rem;
   color: #666;
+}
+
+.file-pandel-heading p {
 }
