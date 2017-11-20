@@ -11,6 +11,7 @@ body {
     background-color: #203438;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 50px;
 }
 
 * {
@@ -23,7 +24,27 @@ body {
     height: auto;
     margin: 0 auto;
     position: relative;
-    top: 50px;
+    top: 30px;
+}
+
+.doc-page-heading {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.doc-page-heading p {
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.doc-page-heading p span {
+  font-weight: bold;
 }
 
 h2.page-jams-title {
@@ -81,6 +102,10 @@ span.snel-weg {
   background: red;
 }
 
+span.overig-weg {
+  background: #424242;
+}
+
 .file-panel-content-container {
   width: 100%;
   box-sizing: border-box;
@@ -110,4 +135,28 @@ footer {
   color: #fff;
   font-size: 0.75rem;
   text-align: center;
+}
+
+.dur-1, .dur-2, .dur-3, .dur-4, .dur-5 {
+  font-weight: bold;
+}
+
+.dur-1 {
+  color: #1b5e20 !important;
+}
+
+.dur-2 {
+  color: #43a047 !important;
+}
+
+.dur-3 {
+  color: #f57f17 !important;
+}
+
+.dur-4 {
+  color: #e65100 !important;
+}
+
+.dur-5 {
+  color: #b71c1c !important;
 }
