@@ -26,6 +26,11 @@ body {
     top: 50px;
 }
 
+h2.page-jams-title {
+  color: #fff;
+  font-size: 1rem;
+}
+
 .file-informatie {
   width: 100%;
   display: flex;
@@ -46,7 +51,7 @@ body {
 .file-panel-heading {
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 15px;
+  padding: 10px 15px 15px 10px;
   cursor: pointer;
   display: flex;
   align-content: flex-start;
@@ -58,6 +63,22 @@ body {
 .file-panel-heading h2 {
   margin: 0;
   color: red;
+  box-sizing: border-box;
+}
+
+.file-panel-heading h2 span {
+  padding: 8px 13px;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+span.prov-weg {
+  background: #FDAF2B;
+}
+
+span.snel-weg {
+  background: red;
 }
 
 .file-panel-content-container {
@@ -85,5 +106,8 @@ body {
   color: #666;
 }
 
-.file-pandel-heading p {
+footer {
+  color: #fff;
+  font-size: 0.75rem;
+  text-align: center;
 }
