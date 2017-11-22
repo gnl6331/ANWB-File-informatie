@@ -11,15 +11,21 @@
 
 </head>
 <body>
+  <nav>
+    <div class="container">
+      <a id="traffic-jam-information" class="nav-item active" href="#">File informatie</a>
+      <a id="traffic-flash-information" class="nav-item" href="#">Flitsers</a>
+      <a id="traffic-roadworks-information" class="nav-item" href="#">Wegwerkzaamheden</a>
+    </div>
+  </nav>
 
     <div class="container">
       <div class="doc-page-heading">
-        <h2 class="page-jams-title">Actuele verkeersinformatie</h2>
+        <h2 class="page-jams-title">Actuele verkeersinformatie<br><span id="latest-update"></span></h2>
         <p id="totaal-vertragingen-text"></p>
       </div>
-        <div id="jam-results-output" class="file-informatie">
-
-      </div>
+        <div id="jam-results-output" class="file-informatie information-active"></div>
+        <div id="flash-results-output" class="file-informatie" style="display: none;"></div>
       <footer>
 
         <p>Project is gemaakt door Jevgeni van Steenis</p>
@@ -29,7 +35,8 @@
     </div>
 
     <script src="scripts/traffic_jam_info.js"></script>
+    <script src="scripts/speed_controll_info.js"></script>
     <script src="scripts/jquery-3.2.1.min.js"></script>
-    <script src="scripts/showhide.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
