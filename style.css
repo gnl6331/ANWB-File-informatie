@@ -9,8 +9,6 @@ body, html {
 
 body {
     background-color: #203438;
-    padding-left: 10px;
-    padding-right: 10px;
     padding-bottom: 50px;
 }
 
@@ -18,13 +16,48 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+nav {
+  width: 100%;
+  height: auto;
+  padding: 10px 0px;
+  background: #fff;
+}
+
+nav .container a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  margin: 0 10px 0 0;
+  background: #fff;
+  display: inline-block;
+}
+
+a.active {
+  color: #0d47a1 !important;
+}
+
+span.nav-amount {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background: red;
+  color: #fff;
+  margin-left: 5px;
+}
+
+
 .container {
     width: 100%;
     max-width: 1000px;
     height: auto;
     margin: 0 auto;
     position: relative;
-    top: 30px;
+    padding: 0 10px 0 10px;
+    box-sizing: border-box;
 }
 
 .doc-page-heading {
@@ -45,11 +78,17 @@ body {
 
 .doc-page-heading p span {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 h2.page-jams-title {
   color: #fff;
   font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+h2 span#latest-update {
+  font-size: 0.85rem;
 }
 
 .file-informatie {
@@ -122,6 +161,7 @@ span.overig-weg {
 .file-panel-content h3 {
   margin: 0 0 5px 0;
   font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 .file-panel-content p, .file-panel-heading p {
@@ -139,6 +179,7 @@ footer {
 
 .dur-1, .dur-2, .dur-3, .dur-4, .dur-5 {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .dur-1 {

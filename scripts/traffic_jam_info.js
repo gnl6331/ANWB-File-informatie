@@ -2,6 +2,8 @@ function writeToDocument(idInTheDocument, variableInJsFile) {
   document.getElementById(idInTheDocument).innerHTML = variableInJsFile;
 }
 
+function getTrafficJamInformation () {
+
 let getFileAnwbData = new XMLHttpRequest();
 getFileAnwbData.onreadystatechange = () => {
     if (getFileAnwbData.readyState === 4) {
@@ -10,6 +12,8 @@ getFileAnwbData.onreadystatechange = () => {
         let totalJamAmount = 0;
         let totalJamAmountToHTML = "";
         let totalFileForThisRoad = 0;
+        let today = new Date();
+        let timeNow = "Laatste update " + today.getHours() + ":" + today.getMinutes();
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 
             /* The if and else statement is checking if there is actualy a traffic jam.
@@ -94,15 +98,15 @@ getFileAnwbData.onreadystatechange = () => {
                       trafficJamToHTML += "<p class=\"dur-2\"> &plusmn; ";
                       trafficJamToHTML += trafficDelayTime + " minuten vertraging ";
                       trafficJamToHTML += "</p>";
-                    } else if (trafficDelayTime > 10 && trafficDelayTime < 20) {
+                    } else if (trafficDelayTime >= 10 && trafficDelayTime < 20) {
                       trafficJamToHTML += "<p class=\"dur-3\"> &plusmn; ";
                       trafficJamToHTML += trafficDelayTime + " minuten vertraging ";
                       trafficJamToHTML += "</p>";
-                    } else if (trafficDelayTime > 20 && trafficDelayTime < 30) {
+                    } else if (trafficDelayTime >= 20 && trafficDelayTime < 30) {
                       trafficJamToHTML += "<p class=\"dur-4\"> &plusmn; ";
                       trafficJamToHTML += trafficDelayTime + " minuten vertraging ";
                       trafficJamToHTML += "</p>";
-                    } else if (trafficDelayTime > 30) {
+                    } else if (trafficDelayTime >= 30) {
                       trafficJamToHTML += "<p class=\"dur-5\"> &plusmn; ";
                       trafficJamToHTML += trafficDelayTime + " minuten vertraging ";
                       trafficJamToHTML += "</p>";
@@ -113,7 +117,6 @@ getFileAnwbData.onreadystatechange = () => {
                     };
 
                 };
-
                 trafficJamToHTML += "</div>";
               };
             };
@@ -139,8 +142,13 @@ getFileAnwbData.onreadystatechange = () => {
 
         writeToDocument("jam-results-output", trafficJamToHTML);
         writeToDocument("totaal-vertragingen-text", totalJamAmountToHTML);
+        writeToDocument("latest-update", timeNow);
     };
 };
 
 getFileAnwbData.open("GET", "https://www.anwb.nl/feeds/gethf");
 getFileAnwbData.send();
+
+};
+
+window.onload = getTrafficJamInformation();
