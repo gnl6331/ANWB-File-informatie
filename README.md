@@ -6,6 +6,11 @@ https://gnl6331.github.io/Dutch-traffic-jam-data/
 
 ## Change-log
 
+**23-11-2017 :**
+* Fixed the menu for mobile devices
+* Fixed the text rendering when te font is bold.
+* Added Road works information
+
 **22-11-2017 :**
 * Added the latest update time
 * Added Menu bar
