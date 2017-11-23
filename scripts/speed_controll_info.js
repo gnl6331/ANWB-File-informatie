@@ -9,13 +9,9 @@ getFileAnwbData.onreadystatechange = () => {
         let totalFlashAmountToHTML = "";
         let totalFileForThisRoad = 0;
         let today = new Date();
-        let currentHours = today.getHours();
-        currentHours = ("0" + currentHours).slice(-2);
-        let currentMinutes = today.getMinutes();
-        currentMinutes = ("0" + currentMinutes).slice(-2);
+        let currentHours = (today.getHours()<10?'0':'') + today.getHours();
+        let currentMinutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
         let timeNow = "Laatste update " + currentHours + ":" + currentMinutes;
-
-
 
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 

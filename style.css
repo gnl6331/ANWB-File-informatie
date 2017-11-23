@@ -49,6 +49,11 @@ span.nav-amount {
   margin-left: 5px;
 }
 
+a#toggle-nav {
+  text-align: right;
+  display: none;
+}
+
 
 .container {
     width: 100%;
@@ -200,4 +205,24 @@ footer {
 
 .dur-5 {
   color: #b71c1c !important;
+}
+
+@media screen and (max-width: 500px) {
+    a#toggle-nav {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    .nav-resp-mobile {
+      display: none;
+    }
+
+    nav .container a.nav-item {
+      display: block;
+      border-bottom: solid #666 1px;
+      font-size: 1rem;
+    }
+    .nav-resp-mobile {
+      margin-bottom: 20px;
+    }
 }
