@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Actuele file informatie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -13,9 +13,12 @@
 <body>
   <nav>
     <div class="container">
-      <a id="traffic-jam-information" class="nav-item active" href="#">File informatie</a>
-      <a id="traffic-flash-information" class="nav-item" href="#">Flitsers</a>
-      <a id="traffic-roadworks-information" class="nav-item" href="#">Wegwerkzaamheden</a>
+      <a href="#" id="toggle-nav"><i class="fa fa-bars" aria-hidden="true"></i></a>
+      <div class="nav-resp-mobile">
+        <a id="traffic-jam-information" class="nav-item active" href="#">File informatie</a>
+        <a id="traffic-flash-information" class="nav-item" href="#">Flitsers</a>
+        <a id="traffic-roadworks-information" class="nav-item" href="#">Wegwerkzaamheden</a>
+      </div>
     </div>
   </nav>
 
@@ -26,16 +29,18 @@
       </div>
         <div id="jam-results-output" class="file-informatie information-active"></div>
         <div id="flash-results-output" class="file-informatie" style="display: none;"></div>
+        <div id="roadworks-results-output" class="file-informatie" style="display: none;"></div>
       <footer>
 
         <p>Project is gemaakt door Jevgeni van Steenis</p>
-        <p>Data &copy; ANWB<br>Versie: 1.1 | 20-11-2017</p>
+        <p>Data &copy; ANWB<br>Versie: 1.5 | 22-11-2017</p>
 
       </footer>
     </div>
 
     <script src="scripts/traffic_jam_info.js"></script>
     <script src="scripts/speed_controll_info.js"></script>
+    <script src="scripts/road_work_info.js"></script>
     <script src="scripts/jquery-3.2.1.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>
