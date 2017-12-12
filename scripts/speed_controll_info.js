@@ -7,12 +7,6 @@ getFileAnwbData.onreadystatechange = () => {
         let FlashControllToHTML = "";
         let totalFlashAmount = 0;
         let totalFlashAmountToHTML = "";
-        let totalFileForThisRoad = 0;
-        let today = new Date();
-        let currentHours = (today.getHours()<10?'0':'') + today.getHours();
-        let currentMinutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
-        let timeNow = "Laatste update " + currentHours + ":" + currentMinutes;
-
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 
             /* The if and else statement is checking if there is actualy a traffic jam.
@@ -99,10 +93,12 @@ getFileAnwbData.onreadystatechange = () => {
           totalFlashAmountToHTML += "Er zijn totaal: <span>";
           totalFlashAmountToHTML += totalFlashAmount;
           totalFlashAmountToHTML += " Flitsers</span>";
+        } else if (totalFlashAmount < 1) {
+          totalFlashAmountToHTML += "Er zijn op dit moment: <span>Geen flitsers</span>";
         } else {
           totalFlashAmountToHTML += "Er is op dit moment: <span>";
           totalFlashAmountToHTML += totalFlashAmount;
-          totalFlashAmountToHTML += " Flitser</span>"
+          totalFlashAmountToHTML += " Flitser</span>";
         };
 
         writeToDocument("flash-results-output", FlashControllToHTML);

@@ -1,7 +1,3 @@
-function writeToDocument(idInTheDocument, variableInJsFile) {
-  document.getElementById(idInTheDocument).innerHTML = variableInJsFile;
-}
-
 function getTrafficJamInformation () {
 
 let getFileAnwbData = new XMLHttpRequest();
@@ -12,10 +8,6 @@ getFileAnwbData.onreadystatechange = () => {
         let totalJamAmount = 0;
         let totalJamAmountToHTML = "";
         let totalFileForThisRoad = 0;
-        let today = new Date();
-        let currentHours = (today.getHours()<10?'0':'') + today.getHours();
-        let currentMinutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
-        let timeNow = "Laatste update " + currentHours + ":" + currentMinutes;
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 
             /* The if and else statement is checking if there is actualy a traffic jam.
@@ -83,7 +75,17 @@ getFileAnwbData.onreadystatechange = () => {
                 // trafficJamToHTML += anwbFileInformatieData.roadEntries[i].events.trafficJams[j].reason;
                 // Looping through the events at a traffic jam
                 for (let k = 0; k < anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events.length; k++) {
-                  trafficJamToHTML += anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events[k].text + ". ";
+
+                  if (anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events[k].text === "Dicht") {
+                    trafficJamToHTML += "De weg is dicht. ";
+                  } else if (anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events[k].text === "Incident") {
+                    trafficJamToHTML += "Vanwege een incident. ";
+                  } else if (anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events[k].text === "Hulpdienstvoertuigen") {
+                    trafficJamToHTML += "Door een inzet van de hulpdiensten. ";
+                  } else {
+                    trafficJamToHTML += anwbFileInformatieData.roadEntries[i].events.trafficJams[j].events[k].text + ". ";
+                  };
+
                 };
                 trafficJamToHTML += "</p>";
 

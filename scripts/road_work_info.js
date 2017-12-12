@@ -8,10 +8,6 @@ getFileAnwbData.onreadystatechange = () => {
         let totalRoadWorksAmount = 0;
         let totalRoadWorksAmountToHTML = "";
         let totalRoadWorksForThisRoad = 0;
-        let today = new Date();
-        let currentHours = (today.getHours()<10?'0':'') + today.getHours();
-        let currentMinutes = (today.getMinutes()<10?'0':'') + today.getMinutes();
-        let timeNow = "Laatste update " + currentHours + ":" + currentMinutes;
         for (let i = 0; i < anwbFileInformatieData.roadEntries.length; i++) {
 
             /* The if and else statement is checking if there is actualy a traffic jam.
