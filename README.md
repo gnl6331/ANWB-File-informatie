@@ -1,22 +1,20 @@
-## Dutch-traffic-jam-data
-Displaying all the traffic jam data in the Netherlands.
-Data is based on a api with JSON format. Very easy to fetch with javascript.
+## ANWB-File-informatie
+Laat de actuele situatie op de weg zien. Dit op basis van een open feed van de ABWB.
 
-https://gnl6331.github.io/Dutch-traffic-jam-data/
+https://gnl6331.github.io/ANWB-File-informatie/
 
 ## Change-log
 
 **23-11-2017 :**
-* Fixed the menu for mobile devices
-* Fixed the text rendering when te font is bold.
-* Added Road works information
+* Menu problemen opgelost voor mobiele apparaten
+* Text Rendering is verbeterd.
+* Toegevoegd: Wegwerkzaamheden
 
 **22-11-2017 :**
-* Added the latest update time
-* Added Menu bar
-* Added Speedcontrol
+* Toegevoegd: Laatste keer dat de informatie is geupdate.
+* Toegevoegd: Menu
+* Toegevoegd: Snelheidscontroles
 
 **20-11-2017 :**
-* Added color background to the type of road in the heading
-* Added Different string for when there is 1 jam or one there is 2 or more jams
-* Added more comments to understand the js file
+* Toegevoegd: Juiste kleur bij het type weg. (Snelweg, Provincialeweg etc.)
+* Toegevoegd: Applicatie maakt nu onderscheid tussen 1 vertraging of meerdere vertragingen
