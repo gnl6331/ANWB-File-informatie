@@ -5,6 +5,10 @@ https://gnl6331.github.io/ANWB-File-informatie/
 
 ## Change-log
 
+**12-12-2017 :**
+* Diverse bugs opgelost
+* Aantal strings gewijzigd. Voorbeeld: "Hulpdienstvoertuigen" wordt nu geplaats als: "Inzet van de hulpdiensten".
+
 **23-11-2017 :**
 * Menu problemen opgelost voor mobiele apparaten
 * Text Rendering is verbeterd.
